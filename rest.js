@@ -20,4 +20,9 @@ app.get('/todo/:id', function(req, res) {
     res.json(todos[req.params.id]);
 });
 
+// POST method route
+app.post('/todo/:id', function (req, res) {
+    res.json(todos[req.params.id]);
+});
+
 var server = app.listen(8000);
