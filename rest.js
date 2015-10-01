@@ -21,8 +21,9 @@ app.get('/todo/:id', function(req, res) {
 });
 
 // POST method route
-app.post('/todo/:id', function (req, res) {
-    res.json(todos[req.params.id]);
+app.get('/adTodo/:todo', function (req, res) {
+    todos.push(req.params.todo);
+    res.json(todos);
 });
 
 var server = app.listen(8000);
